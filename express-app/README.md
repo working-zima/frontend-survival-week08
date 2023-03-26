@@ -1,10 +1,12 @@
-# Express REST API 만들기
+# 8주차 과제 서버
 
-데브로드 프론트엔드 생존코스 4주차 과제 풀이
+데브로드 프론트엔드 생존코스 8주차 과제 서버
 
-## 실행하기
+## 서버 실행하기
 
 ```shell
+cd express-app
+
 npm install
 
 npx nodemon app.ts
