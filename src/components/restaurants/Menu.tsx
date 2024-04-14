@@ -1,8 +1,16 @@
+import styled from 'styled-components';
+
+import MenuItem from './MenuItem';
+
 import Food from '../../types/Food';
 
 import useCartStore from '../../hooks/useCartStore';
 
-import MenuItem from './MenuItem';
+const Container = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+`;
 
 type MenuProps = {
   menu: Food[];
@@ -22,7 +30,7 @@ export default function Menu({ menu }: MenuProps) {
   };
 
   return (
-    <div style={{ paddingBlock: '1rem' }}>
+    <Container>
       {menu.map((food, index) => {
         const key = `${food.id}-${index}`;
 
@@ -34,6 +42,6 @@ export default function Menu({ menu }: MenuProps) {
           />
         );
       })}
-    </div>
+    </Container>
   );
 }

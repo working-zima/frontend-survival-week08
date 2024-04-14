@@ -1,5 +1,11 @@
+import styled from 'styled-components';
+
 import FilterTextField from './FilterTextField';
 import Categories from './Categories';
+
+const Container = styled.div`
+  padding-inline: ${(props) => props.theme.sizes.contentPadding};
+`;
 
 type SearchBarProps = {
   categories: string[];
@@ -12,7 +18,7 @@ export default function SearchBar({
   categories, filterText, setFilterText, setFilterCategory,
 }: SearchBarProps) {
   return (
-    <div>
+    <Container>
       <FilterTextField
         text={filterText}
         setText={setFilterText}
@@ -21,6 +27,6 @@ export default function SearchBar({
         categories={categories}
         setFilterCategory={setFilterCategory}
       />
-    </div>
+    </Container>
   );
 }
